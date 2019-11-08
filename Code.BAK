@@ -1,0 +1,311 @@
+//BRAIN project
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<process.h>
+#include<stdlib.h>
+#include<dos.h>
+#include<string.h>
+struct leve
+{
+	int a[30],b[30];
+	char str1[30],str2[30];
+};
+void design()
+{
+	clrscr();
+	cout<<endl<<endl;
+	cout<<"          ***** **** ****  *****   \n "   ;
+	cout<<"           *   ***  ****    *       BRAIN\n ";
+	cout<<"           *   **** ****    *              ";
+}
+void level(int d)
+{
+	int ext;
+	cout<<"\n\n\nIF you want to exit  select(1) or Enter 0:: ";
+	cin>>ext;
+	if(ext==1)
+		exit(1);
+
+	cout<<"\n\nYou should enter the  numbers shown on the page  \n\n";
+	int i,j;
+	randomize();
+	leve lev;
+	for(i=0;i<d;i++)
+	{
+
+	       lev.a[i]=random(100);
+	       cout<<lev.a[i]<<"\t";
+	}
+	cout<<"\n\n Now memorise  \n\n\n";
+	delay(6000);
+
+	clrscr();
+	design();
+	delay(500);
+	cout<<"\n\n\nNow enter the numbers  in order \n";
+	for(i=0;i<d;i++)
+	{
+		cin>>lev.b[i];
+		cout<<"		";
+	}
+	for(i=0;i<d;i++)
+	{
+		if(lev.a[i]!=lev.b[i])
+		{
+			delay(500);
+			cout<<"\n\nOh wrong  \n\t\t\tTRY AGAIN  \n";
+			delay(2000);
+			exit(1);
+		}
+	}
+	if(i==d)
+		cout<<"\n\nYOU are RIGHT \n GO TO NEXT LEVEL  \n";
+	delay(2000);
+}
+void level_2(int n )
+{
+	leve le[20];
+	strcpy(le[0].str1,"FAITH");
+	strcpy(le[1].str1,"IMPACT");
+	strcpy(	le[2].str1,"DANCE ");
+	strcpy(le[3].str1,"JOKERMAN ");
+	strcpy(le[4].str1,"UNNORMALITY ");
+	strcpy(le[5].str1,"THINKING LEVELS ") ;
+	strcpy(le[6].str1,"DANGEROUS " )  ;
+	strcpy(le[7].str1,"MINT MUST BE HARDER THAN DIAMOND" )   ;
+	strcpy(le[8].str1,"ADVICE STEPS SUCCESS" )    ;
+	strcpy(le[9].str1,"UNEDUCATED UNSUCCESSFUL"  )    ;
+	strcpy(le[10].str1,"BLOOD IS THICKER THAN WATER" )     ;
+	strcpy(le[11].str1, "LOVE REMAINS IN MIND" )     ;
+	strcpy(le[12].str1,"AIM TO ACHIEVE IS LIKE KICKING GOALS"    )    ;
+	strcpy(le[13].str1,"MONSOON MONTHS ARE TOO COLD"   )      ;
+	strcpy(le[14].str1,"HARMONY IN LIFE "  )	;
+	strcpy(le[15].str1,"DELETE SOME ITEMS IN MIND"   )	;
+	strcpy(le[16].str1,"ASK A QUESTION THE U PLZ ANSWER" )	   ;
+	strcpy(le[17].str1,"DARKNESS GO AWAY   "   )	  ;
+	strcpy(le[18].str1, " BLESS OF OTHERS"  )	   ;
+	strcpy(le[19].str1, "THINK POSITIVELY"   )	   ;
+	cout<<"\n\n\n\n\n\n You can see numbers and strings  "
+	    <<"\n\tyou just enter whole things in order  \n";
+
+	int i,j,k,l,p;
+	int ext;
+	cout<<"\n\n\nIF you want to exit  select(1) or Enter 0:: ";
+	cin>>ext;
+	if(ext==1)
+		exit(1);
+	j=random(20);
+	k=random(20);
+	l=random(20);
+	cout<<"\n"<<le[j].str1;
+	if(n>=2)
+		cout<<endl<<le[k].str1;
+	if(n>2)
+		cout<<endl<<le[l].str1;
+	cout<<"\n\n\nNow memorise all";
+	delay(6000);
+	clrscr();
+	design();
+	cout<<"\n\n\nEnter the whole things   \n";
+	for(i=0;i<n;i++)
+	{
+		gets(le[i].str2);
+		cout<<endl;
+	}
+	for(i=0;i<n;i++)
+	{
+	      p=strcmpi(le[j].str1,le[i].str2);
+	      if(p!=0)
+	      {
+		cout<<"\n\nYou have entered wrong things  \n\n\tTRY again  ";
+		delay(1500);
+		exit(1);
+	      }
+	}
+	if(i==n)
+		cout<<"\n\n\n\tYou have enterd right things\n\tCOngratulations  ";
+	cout<<"\n\nWAIT ..........  going on \n";
+	delay(1500);
+}
+void level_3(int n,int m)
+{
+	int ext;
+	cout<<"\n\n\nIF you want to exit  select(1) or Enter 0:: ";
+	cin>>ext;
+	if(ext==1)
+		exit(1);
+	cout<<"\n\nYou should enter the  NUMBERS $$  SENTANCES shown on the page  \n\n";
+	int i,j;
+	randomize();
+	leve lev;
+	for(i=0;i<n;i++)
+	{
+	       lev.a[i]=random(100);
+	       cout<<lev.a[i]<<"\t";
+	}
+	cout<<"\n\n\n\n\n wailt....................\n\n\n";
+	delay(4000);
+	delay(500);
+
+
+	leve le[20];
+	strcpy(le[0].str1,"FAITH");
+	strcpy(le[1].str1,"IMPACT");
+	strcpy(	le[2].str1,"DANCE ");
+	strcpy(le[3].str1,"JOKERMAN ");
+	strcpy(le[4].str1,"UNNORMALITY ");
+	strcpy(le[5].str1,"THINKING LEVELS ") ;
+	strcpy(le[6].str1,"DANGEROUS WORLD" )  ;
+	strcpy(le[7].str1,"MINT MUST BE HARDER THAN DIAMOND" )   ;
+	strcpy(le[8].str1,"ADVICE STEPS SUCCESS" )    ;
+	strcpy(le[9].str1,"UNEDUCATED UNSUCCESSFUL"  )    ;
+	strcpy(le[10].str1,"BLOOD IS THICKER THAN WATER" )     ;
+	strcpy(le[11].str1, "LOVE REMAINS IN MIND" )     ;
+	strcpy(le[12].str1,"AIM TO ACHIEVE IS LIKE KICKING GOALS"    )    ;
+	strcpy(le[13].str1,"MONSOON MONTHS ARE TOO COLD"   )      ;
+	strcpy(le[14].str1,"HARMONY IN LIFE "  )	;
+	strcpy(le[15].str1,"DELETE SOME ITEMS IN MIND"   )	;
+	strcpy(le[16].str1,"ASK A QUESTION THE U PLZ ANSWER" )	   ;
+	strcpy(le[17].str1,"DARKNESS GO AWAY   "   )	  ;
+	strcpy(le[18].str1, " BLESS OF OTHERS"  )	   ;
+	strcpy(le[19].str1, "THINK POSITIVELY"   )	   ;
+	cout<<"\n\n\n\n\n\n You can see  strings  "
+	    <<"\n\tyou just enter whole things in order  \n";
+	randomize();
+	int k,l,p;
+	j=random(20);
+	cout<<"\n"<<le[j].str1;
+	if(m>=2)
+		cout<<endl<<le[k].str1;
+	if(m>2)
+		cout<<endl<<le[l].str1;
+	cout<<"\n\n\nNow memorise all";
+	delay(7000);
+	clrscr();
+	design();
+	cout<<"\n\n\nNow enter the numbers  in order \n";
+	for(i=0;i<n;i++)
+	{
+		cin>>lev.b[i];
+		cout<<"\t";
+	}
+	for(i=0;i<n;i++)
+	{
+		if(lev.a[i]!=lev.b[i])
+		{
+			delay(500);
+			cout<<"\n\nOh wrong  \n\t\t\tTRY AGAIN  \n";
+			delay(2000);
+			exit(1);
+		}
+	}
+	cout<<"\n\n\nNOW  Enter the   strings     \n";
+	for(i=0;i<m;i++)
+	{
+		gets(le[i].str2);
+		cout<<endl;
+	}
+	for(i=0;i<m;i++)
+	{
+	      p=strcmpi(le[j].str1,le[i].str2);
+	      if(p!=0)
+	      {
+		cout<<"\n\nYou have entered wrong things  \n\n\tTRY again  ";
+		delay(1500);
+		exit(1);
+	      }
+	}
+	if(i==m)
+		cout<<"\n\n\n\tYou have enterd right things\n\tCOngratulations  ";
+	cout<<"\n\nWAIT ..........  going on \n";
+	delay(1500);
+
+	if(i==n)
+		cout<<"\n\nYOU are RIGHT \n GO TO NEXT LEVEL  \n";
+	delay(2000);
+}
+void rules()
+{
+	cout<<"\n\n\n\n\t\t\tINSTRUCTIONS   \n\n\n";
+	cout<<"\t\t\t\t This game is just to check your brain as well \n"
+	    <<"your intelligence so try to use it maximum   to increase \n"
+	    <<"your memory\n\n #You just enter what all shown in the screen\n "
+	    <<"#There will be strings and numbers \n#There are  14 levels\n  "
+	    <<"#now play it  ";
+}
+
+
+void main()
+{
+	clrscr();
+	char name[30];
+	void design();
+	design();
+	void rules();
+	rules();
+	cout<<"\n\n\nEnter your name :  ";
+	gets(name);
+	cout<<"\n\nAre you ready for the TEST  \n\n";
+	clrscr();
+	design();
+	void level(int d);
+	void level_2(int n);
+	void level_3(int m, int s);
+	cout<<"\n\n\t"<<name<<"\tyou are in  LEVEL 1\t\t\t";
+	level(3);
+	clrscr();
+	design();
+	cout<<"\n\n\t"<<name<<"\tYou have passed !!! \n\n\t\tNEXT level\n\n\t\tLEVEL 2\n";
+	level(5);
+	clrscr();
+	design();
+	cout<<"\n\n\t"<<name<<"\tYou have passed !!! \n\n\t\tNEXT level\n\n\t\tLEVEL 3\n";
+	level(9);
+	clrscr();
+	design();
+	cout<<"\n\n\t"<<name<<"\tYou have passed !!! \n\n\t\tNEXT level\n\n\t\tLEVEL 4\n";
+	level(15);
+	clrscr();
+	design();
+	cout<<"\n\n\t"<<name<<"\tYou have passed !!! \n\n\t\tNEXT level\n\n\t\tLEVEL 5\n";
+	level_2(1);
+	clrscr();
+	design();
+	cout<<"\n"<<name<<"\tYou have passed!!!!!! \n\n\nNext level   \n\n\t\t\tNEXT LEVEL 6\n";
+	level_2(1);
+	clrscr();
+	design();
+	cout<<"\n\n"<<name<<"\tYou have passed!!!!!! \n\n\nNext level   \n\n\t\t\tNEXT LEVEL 7\n";
+	level_2(2);
+	clrscr();
+	design();
+	cout<<"\n\n"<<name<<"\tYou have passed!!!!!! \n\n\nNext level   \n\n\t\t\tNEXT LEVEL 8\n";
+	level_2(3);
+	clrscr();
+	design();
+	cout<<"\n\n"<<name<<"\tYou have passed!!!!!! \n\n\nNext level   \n\n\t\t\tNEXT LEVEL 9\n";
+	level_3(6,1);
+	clrscr();
+	design();
+	cout<<"\n\n\n "<<name<<"\tYou have passed !!!!!!!!\n\n\n\n\t\t NEXT LEVEL 10\n\n";
+	level_3(6,2);
+	clrscr();
+	design();
+	cout<<"\n\n\n "<<name<<"\tYou have passed !!!!!!!!\n\n\n\n\t\t NEXT LEVEL 11\n\n";
+	level_3(9,2);
+	clrscr();
+	design();
+	cout<<"\n\n\n "<<name<<"\tYou have passed !!!!!!!!\n\n\n\n\t\t NEXT LEVEL 12\n\n";
+	level_3(10,2);
+	clrscr();
+	design();
+	cout<<"\n\n\n "<<name<<"\tYou have passed !!!!!!!!\n\n\n\n\t\t NEXT LEVEL 13\n\n";
+	level_3(11,3);
+	clrscr();
+	design();
+	cout<<"\n\n\n "<<name<<"\tYou have passed whole !!!!!!!!\n\n\n\n\t\t \n\n";
+	cout<<"\n\n\n\n\n\YOU ARE EXTRA \n\n\n\t\tBRILLIANT  \n\n\n congratulations \n\n\n";
+	getch();
+}
+
